@@ -45,8 +45,14 @@ function saveChanges(){
     data.college = college;
     data.hobbies = hobbies;
     data.age = age;
-    console.log("zubair")
-    console.log(data);
+    var url = "https://my-json-server.typicode.com/junnumohd/register/users";
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
     
 }
 
