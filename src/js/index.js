@@ -45,7 +45,7 @@ function saveChanges(){
     data.college = college;
     data.hobbies = hobbies;
     data.age = age;
-    var url = "https://my-json-server.typicode.com/junnumohd/register/users";
+    var url = "http://localhost:3000/users";
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),

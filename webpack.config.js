@@ -15,7 +15,7 @@ module.exports = {
     // https://webpack.js.org/concepts/entry-points/#multi-page-application
     entry: {
         index: './src/js/index.js',
-        about: './src/js/about.js'
+        users: './src/js/users.js'
     },
 
     // how to write the compiled files to disk
@@ -80,10 +80,10 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/html/about.html',
+            template: './src/html/users.html',
             inject: 'body',
-            chunks: ['about'],
-            filename: 'about'
+            chunks: ['users'],
+            filename: 'users'
         }),
         // Prod code
         // new MiniCssExtractPlugin({
