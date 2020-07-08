@@ -1,9 +1,9 @@
 const path = require('path');
 //const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin')
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin')
 //const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
@@ -21,12 +21,15 @@ module.exports = {
     // how to write the compiled files to disk
     // https://webpack.js.org/concepts/output/
     output: {
-        filename: '[name].[hash:20].js',
-        //path: buildPath
+        filename: '[name].js',
+        sourceMapFilename: "[name].bundle.map",
+        libraryTarget: 'var',
+        library: '[name]'
     },
 
     // https://webpack.js.org/concepts/loaders/
     module: {
+        
         rules: [
             {
                 test: /\.js$/,
@@ -36,6 +39,10 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+              },
             // Prod code
             // {
             //     test: /\.css$/,

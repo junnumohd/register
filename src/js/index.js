@@ -4,9 +4,9 @@ import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function(){
 
     var button = document.getElementById('inputButton');
-    button.addEventListener('click',function(){
-        saveChangesJquery();
-    })
+    // button.addEventListener('click',function(){
+    //     saveChangesJquery();
+    // })
 })
 function saveChangesJquery(){
 	var firtName = $('input[name="firstName"]').val();
@@ -38,7 +38,8 @@ function saveChangesJquery(){
 
 
 }
-function saveChanges(){
+export function saveChanges(){
+    alert();
     var firstNameInput = document.getElementById('firstName');
 
     var firstName = firstNameInput.value;
@@ -47,7 +48,7 @@ function saveChanges(){
 
 
     var ageInput = document.getElementById('age');
-   var age = ageInput.value;
+    var age = ageInput.value;
 
     var feedbackInput = document.getElementById('feedback');
     var feedback = feedbackInput.value;
