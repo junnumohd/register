@@ -1,13 +1,43 @@
 import '../css/style.css';
-
+import $ from "jquery";
 
 document.addEventListener('DOMContentLoaded', function(){
+
     var button = document.getElementById('inputButton');
     button.addEventListener('click',function(){
-        saveChanges();
+        saveChangesJquery();
     })
 })
+function saveChangesJquery(){
+	var firtName = $('input[name="firstName"]').val();
+	var lastName = $('#lastName').val();
+	var age = $('#age').val();
+	var feedback = $('#feedback').val();
+	var gender = $("input[name='gender']:checked").val();
+	var college = $('#college').val();
+	var hobbies = [];
+	$('input[name="hobby"]:checked').each(function(){
+		hobbies.push($(this).val())
+	})
+	var obj = {};
+	obj.firstName = firtName;
+	obj.lastName = lastName;
+	obj.age = age;
+	obj.gender = gender;
+	obj.feedback = feedback;
+	obj.college = college;
+	obj.hobbies = hobbies;
+	var url = "http://localhost:3000/users"
+	fetch(url,{
+		body: JSON.stringify(obj),
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	});
 
+
+}
 function saveChanges(){
     var firstNameInput = document.getElementById('firstName');
 
@@ -17,7 +47,7 @@ function saveChanges(){
 
 
     var ageInput = document.getElementById('age');
-    var age = ageInput.value;
+   var age = ageInput.value;
 
     var feedbackInput = document.getElementById('feedback');
     var feedback = feedbackInput.value;
@@ -30,29 +60,4 @@ function saveChanges(){
             gender = radioInputs[i].value
         }
     }
-
-    var hobbies = [];
-    var hobbiesInputs = document.getElementsByName('hobby')// []
-    for (let i = 0; i < hobbiesInputs.length; i++) {
-        if(hobbiesInputs[i].checked){
-            hobbies.push(hobbiesInputs[i].value)
-        }
-    }
-    var data = {};
-    data.firstName = firstName;
-    data.lastName = lastName;
-    data.gender = gender;
-    data.college = college;
-    data.hobbies = hobbies;
-    data.age = age;
-    var url = "http://localhost:3000/users";
-    fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    
 }
-
