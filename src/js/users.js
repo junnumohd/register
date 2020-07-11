@@ -3,22 +3,22 @@ import '../css/user.css';
 import $ from 'jquery'
 
 document.addEventListener('DOMContentLoaded', function(){
-    fetchUsers('table')
+    fetchUsers()
 })
-
-function fetchUsers(selectType){
+var view = "table"
+function fetchUsers(){
     var url = "http://localhost:3000/users";
     fetch(url).then(function(response){	
         return response.json();
     }).then(function(data){	
-        populateDataJquery(data,selectType)
+        populateDataJquery(data)
     });
 }
-function populateDataJquery(data, selectType){
+function populateDataJquery(data){
 	$("#rows").html('');
 	$("#boxes").html('');
 	data.forEach(function(obj){
-		if(selectType === 'table'){
+		if(view === 'table'){
 			$("#table").show();
 			$("#rows").append(tableTemplate(obj))
 		}
@@ -29,8 +29,8 @@ function populateDataJquery(data, selectType){
 	})
 }
 export function changeView(elem){
-	var selectType = $(elem).val();
-	fetchUsers(selectType)
+	view = $(elem).val();
+	fetchUsers()
 }
 
 export function deleteRow(id){
@@ -61,14 +61,18 @@ function tableTemplate(obj){
 }
 function boxTemplate(obj){
 	var boxTemplate = `
-		<div class="box">
-			<div>Firstname: ${obj.firstName} <a href="#" onclick="users.deleteRow(${obj.id})">Delete</a></div>
-			<div>Lastname: ${obj.lastName}</div>
-			<div>Age: ${obj.age}</div>
-			<div>College: ${obj.college}</div>
-			<div>Hobbies: ${obj.hobbies}</div>
-			<div>Gender: ${obj.gender}</div>
-			<div>Feedback: ${obj.feedback}</div>
+		<div class="box shadow bg-white rounded">
+			<div class="card-header">
+				<b>${obj.firstName} ${obj.lastName}</b> 
+				<a href="#" onclick="users.deleteRow(${obj.id})">Delete</a>
+		  	</div>
+		  	<div class="card-body">
+				<div>Age: ${obj.age}</div>
+				<div>College: ${obj.college}</div>
+				<div>Hobbies: ${obj.hobbies}</div>
+				<div>Gender: ${obj.gender}</div>
+				<div>Feedback: ${obj.feedback}</div>
+			</div>	
 		</div>
 	`
 	return boxTemplate;

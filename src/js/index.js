@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import '../css/style.css';
 import $ from "jquery";
 
@@ -12,7 +13,11 @@ export function saveChangesJquery(){
 	var hobbies = [];
 	$('input[name="hobby"]:checked').each(function(){
 		hobbies.push($(this).val())
-	})
+    })
+    if(!firtName || !age || !gender || !college){
+        alert("Please fill required fields")
+        return;
+    }
 	var obj = {};
 	obj.firstName = firtName;
 	obj.lastName = lastName;
@@ -28,12 +33,13 @@ export function saveChangesJquery(){
 		headers: {
 			'Content-Type': 'application/json'
 		}
-	});
+	}).then(function(){
+        alert("User saved successfully")
+    });
 
 
 }
 export function saveChanges(){
-    alert();
     var firstNameInput = document.getElementById('firstName');
 
     var firstName = firstNameInput.value;
