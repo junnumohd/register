@@ -1,14 +1,8 @@
 import '../css/style.css';
 import $ from "jquery";
 
-document.addEventListener('DOMContentLoaded', function(){
 
-    var button = document.getElementById('inputButton');
-    // button.addEventListener('click',function(){
-    //     saveChangesJquery();
-    // })
-})
-function saveChangesJquery(){
+export function saveChangesJquery(){
 	var firtName = $('input[name="firstName"]').val();
 	var lastName = $('#lastName').val();
 	var age = $('#age').val();
@@ -27,7 +21,7 @@ function saveChangesJquery(){
 	obj.feedback = feedback;
 	obj.college = college;
 	obj.hobbies = hobbies;
-	var url = "http://localhost:3000/users"
+	var url = "http://localhost:3000/users"  
 	fetch(url,{
 		body: JSON.stringify(obj),
 		method: 'POST',

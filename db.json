@@ -1,101 +1,45 @@
 {
   "users": [
     {
-      "firstName": "Mohammad",
-      "lastName": "Zubair",
+      "firstName": "rohan",
+      "lastName": "khan",
+      "age": "23",
       "gender": "male",
-      "college": "Aligarh",
-      "hobbies": [
-        "reading"
-      ],
-      "age": "57",
-      "id": 1
-    },
-    {
-      "firstName": "Mohd",
-      "lastName": "Junaid",
-      "gender": "male",
-      "college": "Aligarh",
-      "hobbies": [
-        "reading"
-      ],
-      "age": "29",
-      "id": 2
-    },
-    {
-      "firstName": "Mohammad",
-      "lastName": "Junaid",
-      "gender": "male",
-      "college": "Aligarh",
-      "hobbies": [
-        "reading"
-      ],
-      "age": "30",
-      "id": 3
-    },
-    {
-      "firstName": "Mohammad",
-      "lastName": "Junaid",
-      "gender": "male",
-      "college": "Aligarh",
-      "hobbies": [
-        "reading",
-        "reading",
-        "reading"
-      ],
-      "age": "30",
-      "id": 4
-    },
-    {
-      "firstName": "Mohd",
-      "lastName": "Zohaan",
-      "gender": "male",
-      "college": "Bundelkhand",
-      "hobbies": [
-        "playing"
-      ],
-      "age": "3",
-      "id": 5
-    },
-    {
-      "firstName": "Abdul",
-      "lastName": "gulfam",
-      "gender": "male",
-      "college": "Bundelkhand",
-      "hobbies": [
-        "writing",
-        "playing"
-      ],
-      "age": "34",
-      "id": 6
-    },
-    {
-      "firstName": "mohd",
-      "lastName": "junaid",
-      "age": "29",
-      "gender": "male",
-      "feedback": "            kdvkfksfszl",
+      "feedback": "            kjdfkjsdkfkskfkfskfh",
       "college": "Bundelkhand",
       "hobbies": [
         "reading",
         "writing",
         "playing"
       ],
-      "id": 7
+      "id": 15
     },
     {
-      "firstName": "mohd",
-      "lastName": "junaid",
-      "age": "29",
+      "firstName": "rohan",
+      "lastName": "khan",
+      "age": "23",
       "gender": "male",
-      "feedback": "            kdvkfksfszl",
+      "feedback": "            kjdfkjsdkfkskfkfskfh",
       "college": "Bundelkhand",
       "hobbies": [
         "reading",
         "writing",
         "playing"
       ],
-      "id": 8
+      "id": 16
+    },
+    {
+      "firstName": "suresh",
+      "lastName": "raina",
+      "age": "40",
+      "gender": "male",
+      "feedback": "           i am cricketer",
+      "college": "Rohikhand",
+      "hobbies": [
+        "playing",
+        "singing"
+      ],
+      "id": 19
     }
   ]
 }

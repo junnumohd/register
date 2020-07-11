@@ -6,7 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <table class="table table-sm table-dark">
+	<div style="width:100%">
+		<div class="action">
+			<a href="/">Add Users</a>
+		</div>
+		<div class="action">
+	            <select onchange="users.changeView(this)">
+	                <option value="table">Table</option>
+	                <option value="box">Box</option>
+	            </select>
+	      </div>
+     </div>   
+     <div id="boxes" class="boxWrapper">
+
+     </div>   
+    <table class="table table-sm table-stripped" id="table">
     	<thead>
     		<tr>
     			<th>First Name</th>
@@ -15,6 +29,7 @@
     			<th>Gender</th>
     			<th>Hobbies</th>
     			<th>Action</th>
+    			<th></th>
     		</tr>
     	</thead>
     	<tbody id="rows">

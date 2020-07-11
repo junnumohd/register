@@ -15,7 +15,8 @@ module.exports = {
     // https://webpack.js.org/concepts/entry-points/#multi-page-application
     entry: {
         index: './src/js/index.js',
-        users: './src/js/users.js'
+        users: './src/js/users.js',
+        users1: './src/js/users1.js'
     },
 
     // how to write the compiled files to disk
@@ -39,10 +40,6 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             },
-            {
-                test: /\.html$/i,
-                loader: 'html-loader',
-              },
             // Prod code
             // {
             //     test: /\.css$/,
@@ -91,6 +88,12 @@ module.exports = {
             inject: 'body',
             chunks: ['users'],
             filename: 'users'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/users1.html',
+            inject: 'body',
+            chunks: ['users1'],
+            filename: 'users1'
         }),
         // Prod code
         // new MiniCssExtractPlugin({
