@@ -9,6 +9,7 @@ body{
     clear: both;
     height: auto;
 }
+
 .label{
     width: 150px;
     padding: 20px;;
@@ -47,3 +48,4 @@ body{
     background-color: #2d3e0c;
     border-radius: 5px;
 }
+

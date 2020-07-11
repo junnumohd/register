@@ -16,7 +16,7 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         users: './src/js/users.js',
-        users1: './src/js/users1.js'
+        users1: './src/js/users1.js',
     },
 
     // how to write the compiled files to disk
@@ -95,6 +95,18 @@ module.exports = {
             chunks: ['users1'],
             filename: 'users1'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/html/users1.html',
+            inject: 'body',
+            chunks: ['login'],
+            filename: 'login',
+        })
+        
+
+
+
+
+
         // Prod code
         // new MiniCssExtractPlugin({
         //     filename: "[name].[contenthash].css",
