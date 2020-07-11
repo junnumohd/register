@@ -8,98 +8,106 @@
     </script>
 </head>
 <body>
-    <div class="form">
-        <div class="left label">
-            First Name:
+    <div class="card">
+        <div class="card-header">
+          Register
         </div>
-        <div class="left input">
-            <input type="text" id="firstName" name="firstName"/>
+        <div class="card-body">
+            <div class="form">
+                <div class="left label">
+                    First Name:
+                </div>
+                <div class="left input">
+                    <input type="text" class="form-control" id="firstName" name="firstName"/>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    Last Name:
+                </div>
+                <div class="left input">
+                    <input class="form-control"  type="text" id="lastName" name="lastName"/>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    Age:
+                </div>
+                <div class="left input">
+                    <input class="form-control"  type="text" id="age" name="age"/>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    Gender:
+                </div>
+                <div class="left radio">
+                    <input value="male" type="radio" name="gender"/>
+                    <label> Male </label>
+                </div>
+                <div class="left radio">
+                    <input value="female" type="radio" name="gender"/>
+                    <label> Female </label>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    Hobbies:
+                </div>
+                <div class="left radio">
+                    <input type="checkbox" value="reading" name="hobby"/>
+                    <label> Reading </label>
+                </div>
+                <div class="left radio">
+                    <input type="checkbox" value="writing" name="hobby"/>
+                    <label> Writing </label>
+                </div>
+                <div class="left radio">
+                    <input type="checkbox" value="playing" name="hobby"/>
+                    <label> Playing </label>
+                </div>
+                <div class="left radio">
+                    <input type="checkbox" value="listning" name="hobby"/>
+                    <label> listning </label>
+                </div>
+                <div class="left radio">
+                    <input type="checkbox" value="singing" name="hobby"/>
+                    <label> singing </label>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    College:
+                </div>
+                <div class="left input">
+                    <select id="college" class="form-control" >
+                        <option>Bundelkhand</option>
+                        <option>Rohikhand</option>
+                        <option>Aligarh</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form">
+                <div class="left label">
+                    Feedback:
+                </div>
+                <div class="left input">
+                    <textarea id="feedback" class="form-control">
+                    </textarea>
+                </div>    
+            </div>
+            <div class="form">
+                <div class="left label">
+                    
+                </div>
+                <div class="left input">
+                    <input class="btn" onclick="index.saveChangesJquery()" id="inputButton" type="button" value="Save"/>
+                    <a href="/users1">View Users </a>
+                    
+                </div>    
+            </div>
         </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            Last Name:
-        </div>
-        <div class="left input">
-            <input type="text" id="lastName" name="lastName"/>
-        </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            Age:
-        </div>
-        <div class="left input">
-            <input type="text" id="age" name="age"/>
-        </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            Gender:
-        </div>
-        <div class="left radio">
-            <input value="male" type="radio" name="gender"/>
-            <label> Male </label>
-        </div>
-        <div class="left radio">
-            <input value="female" type="radio" name="gender"/>
-            <label> Female </label>
-        </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            Hobbies:
-        </div>
-        <div class="left radio">
-            <input type="checkbox" value="reading" name="hobby"/>
-            <label> Reading </label>
-        </div>
-        <div class="left radio">
-            <input type="checkbox" value="writing" name="hobby"/>
-            <label> Writing </label>
-        </div>
-        <div class="left radio">
-            <input type="checkbox" value="playing" name="hobby"/>
-            <label> Playing </label>
-        </div>
-        <div class="left radio">
-            <input type="checkbox" value="listning" name="hobby"/>
-            <label> listning </label>
-        </div>
-        <div class="left radio">
-            <input type="checkbox" value="singing" name="hobby"/>
-            <label> singing </label>
-        </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            College:
-        </div>
-        <div class="left input">
-            <select id="college">
-                <option>Bundelkhand</option>
-                <option>Rohikhand</option>
-                <option>Aligarh</option>
-            </select>
-        </div>
-    </div>
-    <div class="form">
-        <div class="left label">
-            Feedback:
-        </div>
-        <div class="left input">
-            <textarea id="feedback" class="left">
-            </textarea>
-        </div>    
-    </div>
-    <div class="form">
-        <div class="left label">
-            
-        </div>
-        <div class="left input">
-            <input class="btn" onclick="index.saveChangesJquery()" id="inputButton" type="button" value="Save"/>
-            <a href="/users1">View Users </a>
-            
-        </div>    
-    </div>
+      </div>
+    
 </body>
 </html>

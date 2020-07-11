@@ -11,27 +11,10 @@ body{
 }
 .label{
     width: 150px;
-    padding: 20px;;
+    padding: 20px;
 }
 .input{
     padding: 20px;
-}
-
-.input input, .input select{
-    padding: 4px;
-    width: 250px;
-    height: 30px;
-    color: #252525;
-    border: 1px solid #292424;
-    border-radius: 2px;
-}
-.input textarea{
-    padding: 4px;
-    height: 50px;
-    width: 250px;
-    color: #252525;
-    border: 1px solid #292424;
-    border-radius: 2px;
 }
 .radio{
     padding: 4px;
@@ -46,4 +29,8 @@ body{
     color: #ffffff;
     background-color: #2d3e0c;
     border-radius: 5px;
+}
+.card{
+    width: 60%;
+    margin: 20px;
 }

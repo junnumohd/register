@@ -12,34 +12,21 @@
         "writing",
         "playing"
       ],
-      "id": 15
+      "id": 16
     },
     {
-      "firstName": "rohan",
-      "lastName": "khan",
+      "firstName": "Zio",
+      "lastName": "jaha",
       "age": "23",
       "gender": "male",
-      "feedback": "            kjdfkjsdkfkskfkfskfh",
+      "feedback": "            lkdl;askdlsakdl;asld;s",
       "college": "Bundelkhand",
       "hobbies": [
         "reading",
         "writing",
         "playing"
       ],
-      "id": 16
-    },
-    {
-      "firstName": "suresh",
-      "lastName": "raina",
-      "age": "40",
-      "gender": "male",
-      "feedback": "           i am cricketer",
-      "college": "Rohikhand",
-      "hobbies": [
-        "playing",
-        "singing"
-      ],
-      "id": 19
+      "id": 17
     }
   ]
 }
